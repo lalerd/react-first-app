@@ -1,0 +1,18 @@
+.citybutton{
+    border: 1px solid #787878;
+    color: black;
+    background-color: #EBF5FF;
+    font-size: 18px;
+    padding: 5px 25px 5px 25px;
+    margin: 0;
+    width: 8rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    display: flex;
+}
+.col{
+    border: 1px solid #787878;
+    border-radius: 5px;
+    height: 15rem;
+    padding-top: 1rem;
+}
