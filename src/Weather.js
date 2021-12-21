@@ -10,7 +10,7 @@ import './App.css';
   const [icon, setIcon] = useState("");
   const [city, setCity] = useState("");
    
-  const getWeatherData = (city,country) => {
+  const getWeatherData = (city) => {
     axios({
       method: "GET",
       url: `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=59fa0a941f4e6fa5cc12a58c93d43fee`,
