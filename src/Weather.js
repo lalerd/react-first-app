@@ -13,7 +13,7 @@ import './App.css';
   const getWeatherData = (city,country) => {
     axios({
       method: "GET",
-      url: `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&APPID=59fa0a941f4e6fa5cc12a58c93d43fee`,
+      url: `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=59fa0a941f4e6fa5cc12a58c93d43fee`,
     })
       .then((response) => {
         setTemperature(response.data.main.temp);
@@ -37,7 +37,7 @@ import './App.css';
            type="submit"
            value="London"
            onClick={() => {
-            getWeatherData("London","uk");
+            getWeatherData("London");
           }}
 
            />
@@ -47,7 +47,7 @@ import './App.css';
            type="submit"
            value="Aydın"
            onClick={() => {
-            getWeatherData("Aydin","tr");
+            getWeatherData("Aydin");
            }}
            /> 
            <br/>
@@ -56,7 +56,7 @@ import './App.css';
            type="submit"
            value="Denizli"
            onClick={() => {
-            getWeatherData("Denizli","tr");
+            getWeatherData("Denizli");
            }}
            /> 
 
@@ -66,7 +66,7 @@ import './App.css';
            type="submit"
            value="İstanbul"
            onClick={() => {
-            getWeatherData("Istanbul","tr");
+            getWeatherData("Istanbul");
            }}
            /> 
          </Col>
