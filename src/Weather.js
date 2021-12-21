@@ -34,7 +34,7 @@ import './App.css';
            
            <input
            className='citybutton'
-           type="submit"
+           type="button"
            value="London"
            onClick={() => {
             getWeatherData("London");
