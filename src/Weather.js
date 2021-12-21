@@ -13,7 +13,7 @@ import './App.css';
   const getWeatherData = (city,country) => {
     axios({
       method: "GET",
-      url: `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&APPID=6c3bc96b2702b6bd11e9bb46d841bcb8`,
+      url: `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&APPID=59fa0a941f4e6fa5cc12a58c93d43fee`,
     })
       .then((response) => {
         setTemperature(response.data.main.temp);
