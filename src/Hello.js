@@ -5,9 +5,9 @@ import React, { Component } from 'react';
   render() {
     const {message}=this.props;
     return (
-        <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1>{message} <i class="far fa-sun"></i></h1>
+        <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+          <h1>{message} <i className="far fa-sun"></i></h1>
         </div>
       </div>
     )
