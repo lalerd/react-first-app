@@ -7,7 +7,7 @@ import './App.css';
  const Weather=()=>{
   const [temperature, setTemperature] = useState("");
   const [desc, setDesc] = useState("");
-  //const [icon, setIcon] = useState("");
+  const [icon, setIcon] = useState("");
   const [city, setCity] = useState("");
    
   const getWeatherData = (city) => {
@@ -18,7 +18,7 @@ import './App.css';
       .then((response) => {
         setTemperature(response.data.main.temp);
         setDesc(response.data.weather[0].main);
-        //setIcon(response.data.weather[0].icon);
+        setIcon(response.data.weather[0].icon);
         setCity(response.data.name)
       })
       .catch((error) => {
@@ -74,7 +74,7 @@ import './App.css';
              <b>{city}</b>
              <br/>
             {desc} {Math.ceil(temperature)} ℃ 
-           
+            <img src ={`http://openweathermap.org/img/w/${icon}.png`}/>
          </Col>
        </Row>
      </Container>
