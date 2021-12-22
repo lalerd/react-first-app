@@ -1,15 +1,13 @@
 import React, {useState} from 'react'
 import { Container,Row,Col } from "reactstrap";
 import './App.css';
- import axios from 'axios';
+import axios from 'axios';
 
- 
  const Weather=()=>{
   const [temperature, setTemperature] = useState("");
   const [desc, setDesc] = useState("");
   const [icon, setIcon] = useState("");
   const [city, setCity] = useState("");
-   
   const getWeatherData = (city) => {
     axios({
       method: "GET",
@@ -31,7 +29,6 @@ import './App.css';
        <Row>
          <Col xs="2">
            <h5>Cities</h5>
-           
            <input
            className='citybutton'
            type="submit"
@@ -39,7 +36,6 @@ import './App.css';
            onClick={() => {
             getWeatherData("London");
           }}
-
            />
            <br/>
             <input
@@ -59,7 +55,6 @@ import './App.css';
             getWeatherData("Denizli");
            }}
            /> 
-
           <br/>
            <input
            className='citybutton'
@@ -74,13 +69,12 @@ import './App.css';
              <b>{city}</b>
              <br/>
             {desc} {Math.ceil(temperature)} ℃ 
-            <img src ={`http://openweathermap.org/img/w/${icon}.png`}/>
-         </Col>
+           {<img src ={`http://openweathermap.org/img/w/${icon}.png`}/>}
+       </Col>
        </Row>
      </Container>
      
       </div>
     )
   }
- 
   export default Weather;
